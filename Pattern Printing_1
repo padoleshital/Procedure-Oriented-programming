@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+void Pattern_111(int irow,int icol)
+{
+	int i=0,j=0,temp=1;
+
+	for(i=1;i<=irow;i++)
+	{
+		for(j=1;j<=icol;j++)
+		{
+
+			if((temp>=1)&&(temp<=9))
+			{
+				printf("%d\t",temp);
+				temp++;
+			}
+			else
+			{
+				temp=1;
+				printf("%d\t",temp);
+				temp++;
+			}
+			
+		}
+		printf("\n");
+	}
+	
+}
+
+int main()
+{
+	int ivalue1=0,ivalue2=0;
+	printf("Enter number of rows and Column");
+	scanf("%d%d",&ivalue1,&ivalue2);
+	
+	Pattern_111(ivalue1,ivalue2);
+	
+	return 0;
+}
